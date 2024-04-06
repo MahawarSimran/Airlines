@@ -1,0 +1,30 @@
+{% extends 'flight/layout.html' %}
+
+{% load static %}
+
+{% block head %}
+    <title>Privacy Policy | Flight</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/privacy-policy.css' %}">
+{% endblock head %}
+
+{% block body %}
+    <section class="privacybanner-section">
+            <img src="{% static 'img/privacy-policy.png' %}" alt="Privacy Policy" class="privacybannerimg">
+    </section>
+    <section class="section section1">
+        <div class="container">
+            <p>
+                Airlines values your privacy. Our privacy policy (“Privacy Policy") applies to all the Personal Data we gather, and you share with us when you visit our websites, use our apps, and utilise any services provided by AirLines including our loyalty programme and live chat options. Once you choose to provide us with Personal Data, Airlines will only use your information in accordance with this Privacy Policy.
+
+            </p>
+            <p>
+                This Privacy Policy is issued on behalf of the Airlines Limited, and is hereinafter referred to as “Airlines”, “we”, “us”, or “our” in this Privacy Policy. Airlines Limited is the controller and responsible for this website.
+            </p>
+            <p> 
+                Please note that other airlines have their own privacy policies. Airlines recommends you read those other policies if your travel plans include travel on other airlines, as those policies may differ from Airlines.
+
+                If you have any questions or comments, please contact our Data Protection Team / Data Protection Officer, whose details are available in Section XIII to this Privacy Policy.
+            </p>
+        </div>
+    </section>
+{% endblock%}

@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/fort.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.btn-primary {
+  background: #BD2A2A;
+  border-color: darkred;
+}
+
+.btn-primary:is(:hover, :focus) {
+  background: darkred;
+  border-color: darkred;
+}
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.options-buttons{
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  margin: 20px;
+}
+
+.options-buttons button {
+  color: white;   /* Set text color to white */
+  background-color: #BD2A2A;   /* Set background color to red */
+  border: none;   /* Remove button border if needed */
+  padding: 10px;  /* Adjust padding as needed */
+  /* Add other button styling as needed */
+}
+
+/* Chatbot Icon Styles */
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px; /* Adjust the width as needed */
+  height: 60px; /* Adjust the height as needed */
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.chat-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Chatbox Styles */
+.chatbox {    
+  padding: 16px;
+  overflow-x: hidden;
+  /* background: linear-gradient(0deg,#ffffff 0%,#f9f6ee 44.54%,#f8c1b4 100%); */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: fixed;
+  bottom: 100px; /* Adjust the position as needed */
+  right: 20px;
+  width: 450px; /* Adjust the width as needed */
+  height: 700px;
+  background-color: crimson;
+  background-image: linear-gradient(135deg, white,lightpink);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex: 1;
+  flex-direction: column;
+  z-index: 1111;
+}
+#chatContent {
+  height: 500px; 
+  overflow-y: scroll; /* Enable vertical scrollbar when content exceeds the height */
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  margin-bottom: 50px;
+}
+
+
+.user-message{
+  font-size: 16px; /* Adjust as needed */
+  padding: 8px; /* Adjust padding as needed */
+  border-radius: 8px; /* Adjust border-radius for rounded corners */
+  display: block; /* Set to block for each message on a new line */
+  margin-bottom: 5px; /* Space between messages */
+  background-color: #BD2A2A;
+  text-align: right;
+  width: fit-content;
+  margin-left: auto;
+}
+.bot-message {
+  font-size: 16px; /* Adjust as needed */
+  padding: 8px; /* Adjust padding as needed */
+  border-radius: 8px; /* Adjust border-radius for rounded corners */
+  display: block; /* Set to block for each message on a new line */
+  margin-bottom: 5px; /* Space between messages */
+  width: fit-content;
+}
+
+.btn-grp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.response-button {
+  background-color: #7C0A02;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .floating-buttons{
+  position: absolute;
+  bottom: 10px; 
+  left: 0;
+  right: 0;
+  margin: 5px;
+  text-align: center;
+  color: #072eae;
+} */
+.user-input {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: 30px;
+  text-align: center;
+  color: #072eae;
+  justify-content: center;
+  z-index: 1;
+  width: inherit;
+
+}
+.user-input button {
+  background-color: #7C0A02;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+.floating-buttons {
+  display: flex;
+  gap: 10px;
+  position: sticky;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 5px;
+  text-align: center;
+  color: #072eae;
+  justify-content: center; /* Center the buttons horizontally */
+  z-index: 1; /* Ensure it appears above the chat content */
+}
+
+#user-message {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 0; /* Remove auto margin on the left */
+  margin-right: 5px; /* Add margin on the right */
+}
+
+#sendButton {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+.bot-message {
+  background-color: #7C0A02; /* Adjust as needed */
+  text-align: left;
+  margin: 5px;
+}
+
+#chatInput {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+
+
+#flight-display {
+  background-color: crimson;
+  background-image: linear-gradient(135deg, crimson, purple);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: none;
+}
+
+.flight-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.book-flight-button {
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.book-flight-button:hover {
+  background-color: #45a049;
+}
+
+.each-flight-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+}

@@ -1,0 +1,16 @@
+.privacybanner-section{
+    height: 10%;
+    width: 100%;
+}
+
+.privacybannerimg{
+    width: 100%;
+    height: 400px;
+}
+
+p, ul{
+    color: #818087 !important;
+}
+b{
+    color: #504f51 !important;
+}
