@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 async function getAirportCode(city) {
     try {
         // Replace 'your_csv_file_path.csv' with the actual path to your CSV file
-        const csvData = await fs.readFile('airports.csv', 'utf-8');
+        const csvData = await fs.readFile('./../../../Data/airports.csv', 'utf-8');
 
         // Convert the input city to lowercase for case-insensitive comparison
         const lowerCaseCity = city.trim().toLowerCase();
